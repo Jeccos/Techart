@@ -1,0 +1,15 @@
+._container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+._borderTop {
+    color: rgba(108, 110, 123, 1);
+    border-top: 1px solid;
+}
+
+._borderBottom {
+    color: rgba(108, 110, 123, 1);
+    border-bottom: 1px solid;
+}
