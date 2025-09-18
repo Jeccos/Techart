@@ -7,10 +7,10 @@
     protected $password;
     
     public function __construct() {
-        $this->$serverName = 'localhost';
-        $this->$dbName = 'test';
-        $this->$userName = 'root';
-        $this->$password = '';
+        $this->serverName = 'localhost';
+        $this->dbName = 'test';
+        $this->userName = 'root';
+        $this->password = '';
     }
  }
 
