@@ -1,34 +1,41 @@
 .news__items {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    row-gap: 50px;
+    column-gap: 20px;
 }
 
 .news__item {
+    position: relative;
     width: calc(50% - 20px);
-}
-
-.news__item:hover {
-    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .news__item:hover .news__itemWrapperTitle {
     color: rgba(132, 24, 68, 1);
 }
 
-.news__itemWrapperTime {
-    font-size: 16px;
-    color: rgba(108, 110, 123, 1);
-    padding: 6px 18px;
-    border-radius: 20px;
-    background-color: rgba(236, 242, 245, 1);
-    display: inline-block;
+.news__item:hover .arrow-button {
+    background-color: rgba(132, 24, 68, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+.news__item:hover .arrow {
+    border-top: 2px solid rgba(255, 255, 255, 1);
+    border-left: 2px solid rgba(255, 255, 255, 1);
+}
+
+.news__item:hover .arrow::after {
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .news__itemWrapperTitle {
     color: rgba(0, 0, 0, 1);
     font-size: 32px;
     transition: color .2s ease-in-out;
+    font-weight: 600;
 }
 
 .news__itemWrapperAnnounce {

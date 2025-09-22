@@ -1,0 +1,39 @@
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.pagination__buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.pagination__button {
+    border-radius: 50%;
+    padding: 16px 22px;
+}
+
+.pagination__button:hover {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(132, 24, 68, 1);
+}
+
+.pagination__buttonPage {
+    position: relative;
+    z-index: 1;
+}
+
+.pagination__buttonPage:hover {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(132, 24, 68, 1);
+}
+
+.pagination__buttonPage:hover .arrow {
+    border-top: 2px solid rgba(255, 255, 255, 1);
+    border-left: 2px solid rgba(255, 255, 255, 1);
+}
+
+.pagination__buttonPage:hover .arrow::after {
+    background-color: rgba(255, 255, 255, 1);
+}

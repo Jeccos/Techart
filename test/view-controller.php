@@ -1,11 +1,10 @@
-<?
+<?php
+
 require_once __DIR__ . '/database.php';
 
-$page = isset($_GET['page']) ? $_GET['page'] : 1;
-$limit = 4;
-$offset = $limit * ($page - 1);
+$id = $_GET['id'];
 
-$newsList->getNews('news', 'date', $limit, 'offset', $offset);
+$newsList->getId('news', 'id', 'id', $id);
 
 $result = $newsList->items;
 
@@ -14,7 +13,5 @@ $dateTime = new DateTime();
 foreach($result as &$item) {
     $item['date'] = $dateTime->modify($item['date'])->format('d.m.Y');
 }
-
-unset($item);
 
 ?>

@@ -1,0 +1,62 @@
+.view__pageInfo {
+    display: flex;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.view__mainPage {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+}
+
+.view__pageInfoTitle {
+    color: grey;
+}
+
+.view__title {
+    font-size: 64px;
+    font-weight: 600;
+    color:rgba(0, 0, 0, 1);
+    margin-bottom: 50px;
+}
+
+.view__items {
+    display: flex;
+    gap: 20px;
+}
+
+.view__item {
+    position: relative;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+}
+
+.view__itemWrapperTitle {
+    font-size: 32px;
+    color: rgba(132, 24, 68, 1);
+    font-weight: 600;
+}
+
+.view__itemWrapperTitle p {
+    margin-top: 0;
+}
+
+.view__itemWrapperAnnounce {
+    font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+}
+
+.view__Image {
+    width: 50%;
+}
+
+.view__Image img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+._marginView {
+    margin-bottom: 40px;
+}

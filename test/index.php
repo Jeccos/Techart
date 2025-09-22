@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . '/news-controller.php' ?>
+<? require_once __DIR__ . '/news-controller.php' ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,24 +11,26 @@
     <link rel="stylesheet" href="../test/styles/common.css">
     <link rel="stylesheet" href="../test/styles/news.css">
     <link rel="stylesheet" href="../test/styles/news-items.css">
+    <link rel="stylesheet" href="../test/styles/pagination.css">
 </head>
 <body>
     <header class="header _container">
         <div class="header__logo">
-            <img src="logo/logo.png" alt="Галактический вестник">
+            <img src="logo/logo.svg" alt="Галактический вестник">
         </div>
     </header>
     <main class="main">
-        <div>Я ПЕРВАЯ НОВОСТЬ: <?=$result[0]['title']?></div>
+        <? require_once __DIR__ . '/first-news.php' ?>
         <div class="news _container">
-            <h1 class="news__title">Новости</h1>
+            <h2 class="news__title">Новости</h2>
             <div class="news__items">
                 <?
                     foreach($result as $item) {
                         ?>
                             <div class="news__item">
+                                <a href="view.php?id=<?=$item['id']?>" class="link"></a>
                                 <div class="news__itemWrapper">
-                                    <div class="news__itemWrapperTime _marginBottom">
+                                    <div class="date _marginBottom">
                                         <span><?=$item['date']?></span>
                                     </div>
                                     <div class="news__itemWrapperTitle _marginBottom">
@@ -37,10 +39,10 @@
                                     <div class="news__itemWrapperAnnounce _marginBottom">
                                         <?=$item['announce']?>
                                     </div>
-                                    <a href="view.php?id=<?=$item['id']?>" class="news__itemWrapperButton">
-                                        <span>Подробнее</span>
-                                        <span class="arrow"></span>
-                                    </a>
+                                </div>
+                                <div class="button arrow-button">
+                                    <span>Подробнее</span>
+                                    <span class="arrow arrowRight"></span>
                                 </div>
                             </div>
                         <?
@@ -48,6 +50,7 @@
                 ?>
             </div>
         </div>
+        <? require_once __DIR__ . '/pagination.php' ?>
     </main>
     <footer class="footer _container _borderTop">
         <div class="footer__copyright">

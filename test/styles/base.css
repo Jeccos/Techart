@@ -1,5 +1,30 @@
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/open-sans-cyrillic-400-normal.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/open-sans-cyrillic-600-normal.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/open-sans-latin-400-normal.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
 *, *:before, *:after {
     box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'OpenSans';
   }
   
   h1, h2, h3, h4, h5, h6 {
